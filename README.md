@@ -21,8 +21,8 @@ Before you begin, ensure you have the following installed:
 ## 📦 Installation & Setup
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/yourusername/yourproject.git
-cd yourproject
+git clone https://github.com/T-J-Whittington/Arbor-Test.git
+cd Arbor-Test
 
 ### 2️⃣ Build & Start Docker Containers
 Run the following command to build and start the containers:
@@ -56,12 +56,12 @@ Once the containers are running, access the API at:
 - /list [GET] - Returns the top ten scores in an array format.
 - /new [GET] - Returns a new random string of characters.
 - /compare [POST] - Assesses the given attempt, returning a current score and whatever letters are left. Returns no letters if there are no more anagrams.
--- attemptWord - string, required.
--- remainingLetters - string, required.
--- currentScore - number, optional.
+- - attemptWord - string, required.
+- - remainingLetters - string, required.
+- - currentScore - number, optional.
 - /end [POST] - Ends the current word, returning the final score and any potential anagrams.
--- remainingLetters - string, required.
--- currentScore - number, required.
+- - remainingLetters - string, required.
+- - currentScore - number, required.
 
 
 ---------
