@@ -1,0 +1,21 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+wordNew:
+    path: /new
+    controller: App\Controller\WordController::new
+
+wordCompare:
+    path: /compare
+    controller: App\Controller\WordController::compare
+
+wordEnd:
+    path: /end
+    controller: App\Controller\WordController::end
+
+scoreList:
+    path: /list
+    controller: App\Controller\ScoreController::list

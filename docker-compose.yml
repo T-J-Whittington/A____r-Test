@@ -1,0 +1,53 @@
+services:
+  # Symfony service (PHP)
+  php:
+    image: php:8.2-apache
+    container_name: symfony-php
+    build: .
+    volumes:
+      - ./test-api:/var/www/html
+    networks:
+      - symfony_network
+    environment:
+      MYSQL_PASSWORD: symfony
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+    depends_on:
+      - db
+
+  # MySQL service
+  db:
+    image: mysql:8
+    container_name: mysql-symfony
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: symfony
+      MYSQL_USER: symfony
+      MYSQL_PASSWORD: symfony
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - symfony_network
+
+  # Apache web server
+  apache:
+    build: .
+    container_name: apache-symfony
+    volumes:
+      - ./test-api:/var/www/html
+      - ./apache.conf:/etc/apache2/sites-available/000-default.conf
+    ports:
+      - "8000:80"
+    depends_on:
+      - php
+    networks:
+      - symfony_network
+
+networks:
+  symfony_network:
+    driver: bridge
+
+volumes:
+  mysql_data:
