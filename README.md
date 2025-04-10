@@ -21,8 +21,8 @@ Before you begin, ensure you have the following installed:
 ## 📦 Installation & Setup
 
 ### 1️⃣ Clone the Repository
-git clone https://github.com/T-J-Whittington/Arbor-Test.git
-cd Arbor-Test
+git clone https://github.com/T-J-Whittington/a____r-Test.git
+cd a____r-Test
 
 ### 2️⃣ Build & Start Docker Containers
 Run the following command to build and start the containers:
@@ -67,7 +67,7 @@ Once the containers are running, access the API at:
 ---------
 
 # My Solution
-I chose to use a Symfony framework as both myself and Arbor use it, and I know that it can accomplish the given task.
+I chose to use a Symfony framework as both myself and a____r use it, and I know that it can accomplish the given task.
 I chose Docker as the containerised nature of it allows for easier reproduction and testing.
 
 I went with an API style as the test document specified a backend. I originally planned to do a very basic React frontend but opted to create a purely backend system which I developed using Postman.
@@ -80,3 +80,7 @@ I did not save the currently active word to the database as I felt that, when co
 However, as the top scores needed to be persisted, they are saved to a local MySQL database. With the theoretical front-end, I'd probe the /list endpoint on launch to display a table of top scoring words to the user.
 
 If I had more time, I would have added unit tests, and would improve the setup to make it easier by better leveraging Docker. Validation needs adding to any incoming data, though this would also be mitigated with a front-end.
+
+# Comments
+
+Obfuscated test.
